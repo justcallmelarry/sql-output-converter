@@ -4,7 +4,7 @@ Currently needs the columns that might contain a pipe in the value to be quoted 
 
 Uses the csv module to quickly sort the data and then exporting it as a csv.
 
-I often do reports straight from the command line via mysql, and this helps me share it on to the people asking for it.
+I often do reports straight from the command line via mysql, and this helps me share it in a format that is easier for people to work with.
 
 
 ### Usage
