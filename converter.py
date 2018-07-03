@@ -10,13 +10,12 @@ class SqlOutputConverter:
         self.output_filename = 'output'
 
     def to_csv(self, sql_output):
-        with open('{}.csv'.format(self.output_filename), 'w') as output_file:
+        with open(f'{self.output_filename}.csv', 'w', newline='', encoding=self.encoding) as output_file:
             writer = csv.writer(output_file, delimiter=self.delimiter, quotechar='"')
             for row in sql_output:
                 if row.startswith('+'):
                     continue
                 row = row[2:-2].strip()
-                row = row.decode()
                 row = list(csv.reader(StringIO(row), delimiter='|', quotechar='\'', skipinitialspace=True))
                 row = [self._format_output(x) for x in row[0]]
                 writer.writerow(row)
