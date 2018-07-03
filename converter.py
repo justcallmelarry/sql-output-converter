@@ -10,7 +10,7 @@ class SqlOutputConverter:
         self.output_filename = 'output'
 
     def to_csv(self, sql_output):
-        with open(f'{self.output_filename}.csv', 'w', newline='', encoding=self.encoding) as output_file:
+        with open('{}.csv'.format(self.output_filename), 'w', newline='', encoding=self.encoding) as output_file:
             writer = csv.writer(output_file, delimiter=self.delimiter, quotechar='"')
             for row in sql_output:
                 if row.startswith('+'):
