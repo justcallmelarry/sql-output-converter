@@ -16,6 +16,8 @@ class SqlOutputConverter:
                 if row.startswith('+'):
                     continue
                 row = row[2:-2].strip()
+                if row == '':
+                    continue
                 row = list(csv.reader(StringIO(row), delimiter='|', quotechar='\'', skipinitialspace=True))
                 row = [self._format_output(x) for x in row[0]]
                 writer.writerow(row)
