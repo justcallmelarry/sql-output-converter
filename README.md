@@ -9,3 +9,6 @@ I often do reports straight from the command line via mysql, and this helps me s
 
 ### Usage
 $ python converter.py input-text.txt
+
+
+#### Requires Python 3.6
