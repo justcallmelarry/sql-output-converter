@@ -8,7 +8,10 @@ I often do reports straight from the command line via mysql, and this helps me s
 
 
 ### Usage
-$ python converter.py input-text.txt
+```
+$ python converter.py input-text.txt [-d]
+```
 
+The `-d` option changes the delimiter in the file from `,` to `;` (european excel standard)
 
 #### Requires Python 3.6
